@@ -1,0 +1,12 @@
+<struts-config>
+		<form-beans>
+					<form-bean name="RF" type="beans.HelloFormBackup">
+					</form-bean>
+		</form-beans>
+		<action-mappings>
+				<action path="/hello"  input="/index.jsp" type="beans.HelloController">
+						<forward name="success" path="/success.jsp" />
+				</action>
+		</action-mappings>
+		<message-resources parameter="beans/Messages" />
+</struts-config>
